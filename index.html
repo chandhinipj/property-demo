@@ -11,26 +11,23 @@
 
   <!-- Salesforce Embedded Chat Script -->
   <script type='text/javascript'>
-    function initEmbeddedMessaging() {
-      try {
-        embeddedservice_bootstrap.settings.language = 'en_US';
-        embeddedservice_bootstrap.init(
-          '00DdL00000QvHhw',
-          'WebDemoDeployment',
-          'https://chanj-dev-ed.develop.my.site.com/ESWWebDemoDeployment1751883621926',
-          {
-            scrt2URL: 'https://chanj-dev-ed.develop.my.salesforce-scrt.com'
-          }
-        );
-      } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-      }
-    }
-  </script>
-  <script 
-    type='text/javascript' 
-    src='https://chanj-dev-ed.develop.my.site.com/ESWWebDemoDeployment1751883621926/assets/js/bootstrap.min.js' 
-    onload='initEmbeddedMessaging()'>
-  </script>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DdL00000QvHhw',
+				'WebDemoDeployment',
+				'https://chanj-dev-ed.develop.my.site.com/ESWWebDemoDeployment1751888844741',
+				{
+					scrt2URL: 'https://chanj-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://chanj-dev-ed.develop.my.site.com/ESWWebDemoDeployment1751888844741/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
