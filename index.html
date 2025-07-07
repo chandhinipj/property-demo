@@ -2,55 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Property Viewing Assistant</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      padding: 40px;
-      text-align: center;
-    }
-    h1 {
-      color: #333;
-    }
-    .property-box {
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 500px;
-      background: white;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Demo with Agentforce Bot</title>
 </head>
 <body>
-  <h1>Welcome to Our Property Viewing Demo</h1>
-  <div class="property-box">
-    <h2>3-Bed Semi in Birmingham</h2>
-    <p>Price: £275,000</p>
-    <p>Postcode: B12 9NY</p>
-  </div>
+  <h1>Welcome to the Property Demo Website</h1>
+  <p>This is a demo to showcase our Agentforce Assistant.</p>
 
+  <!-- Salesforce Embedded Chat Script -->
   <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DdL00000QvHhw',
-				'WebDemoDeployment',
-				'https://chanj-dev-ed.develop.my.site.com/ESWWebDemoDeployment1751883621926',
-				{
-					scrt2URL: 'https://chanj-dev-ed.develop.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://chanj-dev-ed.develop.my.site.com/ESWWebDemoDeployment1751883621926/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
-
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US';
+        embeddedservice_bootstrap.init(
+          '00DdL00000QvHhw',
+          'WebDemoDeployment',
+          'https://chanj-dev-ed.develop.my.site.com/ESWWebDemoDeployment1751883621926',
+          {
+            scrt2URL: 'https://chanj-dev-ed.develop.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    }
+  </script>
+  <script 
+    type='text/javascript' 
+    src='https://chanj-dev-ed.develop.my.site.com/ESWWebDemoDeployment1751883621926/assets/js/bootstrap.min.js' 
+    onload='initEmbeddedMessaging()'>
+  </script>
 </body>
 </html>
